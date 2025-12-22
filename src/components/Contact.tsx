@@ -15,7 +15,7 @@ export function Contact() {
 
         <a
           href="mailto:amirahazharii97@gmail.com"
-          className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all text-sm mb-12"
+          className="inline-flex items-center gap-3 px-8 py-4 bg-indigo-700 text-white rounded-full hover:bg-indigo-900 transition-all text-sm mb-12"
         >
           <Mail size={18} />
           amirahazharii97@gmail.com

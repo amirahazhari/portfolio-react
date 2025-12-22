@@ -4,21 +4,24 @@ import {
   Users,
   Wrench,
 } from "lucide-react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import Slider from "react-slick";
-import myEnergyStatsImage from "figma:asset/ea00ecdce7c71ed6234c143c54b8bf03b9c8a960.png";
-import alphaGasImage from "figma:asset/e5ae8665297468404097a1757879e34ff57a93c2.png";
-import energyPortalChallengeImage from "figma:asset/92df1da562eb40e2b829386889af3e9e9cb5abe2.png";
-import energyPortalUserProblemImage from "figma:asset/7700dfc2a59ae8af9eec700cec3816f5158c83c2.png";
-import energyPortalSolutionImage from "figma:asset/c50669d3b9d7d84a6fa68ecceb2c7ae89d3737a3.png";
-import alphaGasChallengeImage from "figma:asset/fa368677f572a8e376ff6d8dd216213d5b2e0089.png";
-import alphaGasUserProblemImage from "figma:asset/4f2c09875affd58572fbdd991249d47a2a065294.png";
-import alphaGasOutcomeImage from "figma:asset/b76450c7249c31a45b1137ec51e4e3b4ff62eaf9.png";
-import alphaGasHighlightComparison from "figma:asset/8458487d2656248abaa908a9976fc9a310039145.png";
-import alphaGasHighlightDashboard from "figma:asset/5db28f03828737f3da9e0a0f8e17a195263c8130.png";
-import energyPortalHighlightMobile from "figma:asset/af0b282e9b9d06d8f09bf4ca898d6c6e9ff30c2a.png";
-import energyPortalHighlightNews from "figma:asset/542080eee6f1ba2940a8146391d1bf0e37309a68.png";
-import energyPortalHighlightChart from "figma:asset/040c68ac26a6a0eff857021596e67892119e71a9.png";
+
+// src/utils/images.ts
+// src/utils/media.ts
+const media = import.meta.glob(
+  "../assets/*",
+  { eager: true, import: "default" }
+) as Record<string, string>;
+
+export const mediaSrc = (file: string) => {
+  const key = `../assets/${file}`;
+  if (!media[key]) {
+    console.warn(`Media not found: ${file}`);
+  }
+  return media[key];
+};
+
 
 interface CaseStudyDetailProps {
   caseStudyId: number;
@@ -32,7 +35,7 @@ const caseStudyData: Record<number, any> = {
     category: "Energy Portal",
     description:
       "Malaysia's comprehensive energy information portal, simplifying complex usage data into meaningful insights for everyday users.",
-    image: myEnergyStatsImage,
+    video: mediaSrc("Recording 2025-11-09 210335.mp4"),
     //video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
     tags: [
       "UI/UX",
@@ -50,25 +53,25 @@ const caseStudyData: Record<number, any> = {
     highlights: [
       {
         title: "Built for smooth, seamless interaction.",
-        image: energyPortalHighlightNews,
+        image: mediaSrc("542080eee6f1ba2940a8146391d1bf0e37309a68.png"),
       },
       {
         title: "Simplified with intuitive, responsive design.",
-        image: energyPortalHighlightMobile,
+        image: mediaSrc("af0b282e9b9d06d8f09bf4ca898d6c6e9ff30c2a.png"),
         fit: "contain",
       },
       {
         title: "Dynamic charts powered by clean, modular code.",
-        image: energyPortalHighlightChart,
+        image: mediaSrc("040c68ac26a6a0eff857021596e67892119e71a9.png"),
       },
     ],
-    challengeImage: energyPortalChallengeImage,
+    challengeImage: mediaSrc("92df1da562eb40e2b829386889af3e9e9cb5abe2.png"),
     challengeHeadline: "Data Scattered. Insights lost.",
     challengeDescription:
       "We needed to bring all energy information into a single, intuitive platform that makes sense at a glance.",
     challenge:
       "Users struggled to understand their energy consumption patterns due to complex data presentation and lack of clear visualizations. The existing system was overwhelming with technical jargon and difficult to navigate.",
-    userProblemImage: energyPortalUserProblemImage,
+    userProblemImage: mediaSrc("7700dfc2a59ae8af9eec700cec3816f5158c83c2.png"),
     userProblemHeadline:
       "Users were overwhelmed by complex data.",
     userProblemDescription:
@@ -77,7 +80,7 @@ const caseStudyData: Record<number, any> = {
       "A responsive, human-centered energy dashboard.",
     solutionSubtext:
       "Built for focus, featuring smooth navigation and responsive, interactive dashboards.",
-    solutionImage: energyPortalSolutionImage,
+    solutionImage: mediaSrc("c50669d3b9d7d84a6fa68ecceb2c7ae89d3737a3.png"),
     solution:
       "I designed and developed a clean, user-friendly dashboard with intuitive data visualizations, clear navigation, and simplified language. The interface uses progressive disclosure to present complex information in digestible chunks.",
     impact: [
@@ -101,7 +104,7 @@ const caseStudyData: Record<number, any> = {
     category: "Engineering Operations Platform",
     description:
       "An internal gas operations platform designed to simplify complex engineering workflows through clear, efficient UI/UX.",
-    image: alphaGasImage,
+    video: mediaSrc("Recording 2025-11-10 183801.mp4"),
     // video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
     tags: [
       "Design System",
@@ -116,39 +119,43 @@ const caseStudyData: Record<number, any> = {
       {
         title:
           "Built for clarity, speed, and effortless navigation.",
-        image: alphaGasHighlightDashboard,
+           image: mediaSrc("Untitled design (4).gif"),
+           
       },
+      
       {
         title:
           "From wireframes to final build — refined at every detail.",
-        image: alphaGasHighlightComparison,
+        image: mediaSrc("8458487d2656248abaa908a9976fc9a310039145.png"),
       },
       {
         title:
           "Intuitive design that feels natural, powerful, and reliable.",
-        image: alphaGasHighlightDashboard,
+        image: mediaSrc("5db28f03828737f3da9e0a0f8e17a195263c8130.png"),
       },
     ],
+  
+
     challengeHeadline: "Fragmented Systems. Planning slowed.",
     challengeDescription:
       "Operations were scattered across multiple tools, making decision-making inefficient.",
-    challengeImage: alphaGasChallengeImage,
+    challengeImage: mediaSrc("fa368677f572a8e376ff6d8dd216213d5b2e0089.png"),
     challenge:
       "Engineering teams were using multiple disconnected systems, leading to inefficiencies, data silos, and increased error rates. The existing tools were not designed with user experience in mind, making daily operations cumbersome.",
-    userProblemImage: alphaGasUserProblemImage,
+    userProblemImage: mediaSrc("energy-portal-challenge.png"),
     userProblemHeadline: "Manual Processes. Insights missing.",
     userProblemDescription:
       "Planners struggled to access key information and relied on manual workflows.",
     solutionHeadline: "Interactive Dashboards. UX redesigned.",
     solutionSubtext:
       "Research, wireframes, prototypes, and responsive interfaces simplified workflows and visualized data clearly.",
-    solutionImage: alphaGasImage,
+    solutionImage: mediaSrc("alpha-gas.png"),
     solution:
       "I conducted extensive user research with engineering teams to understand their workflows and pain points. The solution involved creating a unified platform with a comprehensive design system, streamlined navigation, and role-based interfaces tailored to different user types.",
     outcomeHeadline: "Unified Platform. Smarter Decisions.",
     outcomeDescription:
       "Users can now plan faster, reduce errors, and make informed choices at a glance.",
-    outcomeImage: alphaGasOutcomeImage,
+    outcomeImage: mediaSrc("b76450c7249c31a45b1137ec51e4e3b4ff62eaf9.png"),
     impact: [
       {
         metric: "4.8/5",
@@ -165,7 +172,7 @@ const caseStudyData: Record<number, any> = {
     ],
   },
 };
-
+  console.log("MEDIA KEYS:", Object.keys(media));
 export function CaseStudyDetail({
   caseStudyId,
   onBack,
@@ -213,7 +220,7 @@ export function CaseStudyDetail({
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="absolute top-6 left-6 z-50"
+        className="sticky absolute top-6 left-6 z-50"
       >
         <button
           onClick={onBack}
@@ -370,7 +377,7 @@ export function CaseStudyDetail({
       </section>
 
       {/* View Prototype Button */}
-      <div className="sticky top-6 z-40 flex justify-center pointer-events-none -mt-10 mb-10">
+      <div className="sticky bottom-6 z-40 flex justify-center pointer-events-none -mt-10 mb-10">
         <a
           href={
             study.id === 1
@@ -379,7 +386,7 @@ export function CaseStudyDetail({
           }
           target="_blank"
           rel="noopener noreferrer"
-          className="pointer-events-auto flex items-center gap-2 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg border border-gray-200 hover:bg-gray-50 transition-all text-sm text-gray-700"
+          className="pointer-events-auto flex items-center gap-2 px-6 py-3 bg-black backdrop-blur-sm rounded-full shadow-lg border border-gray-200 hover:bg-gray-900 transition-all text-sm text-gray-300"
         >
           {study.id === 1 ? "View Portal" : "View Prototype"}
         </a>

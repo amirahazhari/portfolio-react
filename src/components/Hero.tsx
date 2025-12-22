@@ -37,10 +37,10 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col sm:flex-row justify-center gap-4 mb-24"
         >
-          <a href="#work" className="inline-flex items-center justify-center px-8 py-3 bg-violet-600 text-white rounded-full hover:bg-purple-700 transition-all text-sm">
+          <a href="#work" className="inline-flex items-center justify-center px-8 py-3 bg-indigo-700 text-white rounded-full hover:bg-indigo-900 transition-all text-sm">
             View my work
           </a>
-          <a href="#contact" className="inline-flex items-center justify-center px-8 py-3 text-purple-600 hover:text-purple-700 transition-colors text-sm">
+          <a href="#contact" className="inline-flex items-center justify-center px-8 py-3 text-indigo-700 hover:text-indigo-900 transition-colors text-sm">
             Get in touch
           </a>
         </motion.div>
