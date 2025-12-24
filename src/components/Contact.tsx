@@ -1,4 +1,5 @@
 import { Mail, Linkedin, Github } from "lucide-react";
+import { motion } from "motion/react";
 
 export function Contact() {
   return (
@@ -13,15 +14,18 @@ export function Contact() {
           Have a project in mind? Let's talk.
         </p>
 
-        <a
-          href="mailto:amirahazharii97@gmail.com"
-          className="inline-flex items-center gap-3 px-8 py-4 bg-indigo-700 text-white rounded-full hover:bg-indigo-900 transition-all text-sm mb-12"
-        >
-          <Mail size={18} />
+          <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="mailto:amirahazharii97@gmail.com"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-indigo-700 text-white rounded-full text-sm shadow-lg shadow-purple-900/10"
+            >
+              <Mail size={18} />
           amirahazharii97@gmail.com
-        </a>
+            </motion.a>
+          
 
-        <div className="flex justify-center gap-8 pt-12 border-t border-gray-200">
+        <div className="flex justify-center gap-8 pt-12 border-gray-200">
           <a
             href="www.linkedin.com/in/amirah-zulaikha-azhari"
             target="_blank"

@@ -1,6 +1,7 @@
 import {
   ArrowLeft,
   Calendar,
+  Sparkles,
   Users,
   Wrench,
 } from "lucide-react";
@@ -220,7 +221,7 @@ export function CaseStudyDetail({
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="sticky absolute top-6 left-6 z-50"
+        className="sticky absolute top-6 left-16 z-50"
       >
         <button
           onClick={onBack}
@@ -377,19 +378,24 @@ export function CaseStudyDetail({
       </section>
 
       {/* View Prototype Button */}
-      <div className="sticky bottom-6 z-40 flex justify-center pointer-events-none -mt-10 mb-10">
-        <a
-          href={
+     
+      <div className="flex bottom-6 top-6 z-40 flex justify-center pointer-events-none -mt-10 mb-10">
+         <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href={
             study.id === 1
               ? "https://myenergystats.st.gov.my/"
               : "https://www.figma.com/proto/ydwV957I5nFkUk926OJ4W2/AlphaGas-Phase-2?page-id=0%3A1&node-id=811-189531&viewport=174%2C354%2C0.06&t=vvO8529CGsTyWonG-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=3221%3A304788"
           }
           target="_blank"
           rel="noopener noreferrer"
-          className="pointer-events-auto flex items-center gap-2 px-6 py-3 bg-black backdrop-blur-sm rounded-full shadow-lg border border-gray-200 hover:bg-gray-900 transition-all text-sm text-gray-300"
+          className="pointer-events-auto flex items-center gap-2 px-6 py-3 bg-indigo-700 backdrop-blur-sm rounded-full shadow-lg border border-gray-200 hover:bg-gray-900 transition-all text-sm text-gray-300"
         >
           {study.id === 1 ? "View Portal" : "View Prototype"}
-        </a>
+              
+          <Sparkles size={16} />
+          </motion.a>
       </div>
 
       {/* Challenge */}
@@ -639,7 +645,7 @@ export function CaseStudyDetail({
             <a
               href="#contact"
               onClick={onBack}
-              className="inline-flex items-center justify-center px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all text-sm"
+              className="inline-flex items-center justify-center px-8 py-3 bg-indigo-700 text-white rounded-full hover:bg-indigo-900 transition-all text-sm"
             >
               Get in touch
             </a>

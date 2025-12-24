@@ -13,7 +13,7 @@ export function Header() {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-10">
+          <div className="flex items-center gap-10">
             <a href="#work" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">
               Work
             </a>
