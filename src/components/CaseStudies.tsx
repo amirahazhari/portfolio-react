@@ -59,7 +59,7 @@ export function CaseStudies({ onViewDetail }: CaseStudiesProps) {
       <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl sm:text-5xl md:text-6xl tracking-tight text-gray-900 mb-4">
-            Recent work.
+            Featured Case Studies.
           </h2>
           <p className="text-xl sm:text-2xl text-gray-600 max-w-2xl mx-auto">
             Solutions that drive results.

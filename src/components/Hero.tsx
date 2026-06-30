@@ -93,10 +93,10 @@ export function Hero() {
               variants={itemVariants}
               className="text-center text-left text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-gray-900 leading-[1.05]"
             >
-              <span className="block">Design meets code.</span>
+              <span className="block">Business meets</span>
           
-              <span className="block text-center text-left text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-purple-700 to-gray-900 bg-300% animate-gradient-sm mt-4">
-                Perfectly.
+              <span className="block text-center text-left text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-purple-700 to-gray-900 bg-300% animate-gradient-sm mt-4 mb-6">
+                Technology.
               </span>
             </motion.h1>
           </div>
@@ -105,8 +105,7 @@ export function Hero() {
               variants={itemVariants}
               className="text-xl sm:text-2xl md:text-3xl text-gray-400 max-w-3xl mb-12 mx-auto lg:mx-0"
             >
-              UI/UX Designer & Front-End Developer crafting experiences from concept
-              to production.
+              Business Analyst specializing in banking, digital transformation, and product development.
             </motion.p>
 
             <motion.div
@@ -134,10 +133,10 @@ export function Hero() {
 
             <motion.div variants={itemVariants} className="text-sm space-y-4">
               <div className="uppercase tracking-wider text-gray-400 font-bold">
-                Tools & Technologies
+                CORE EXPERTISE
               </div>
               <div className="flex flex-wrap justify-start justify-center gap-x-8 gap-y-6 text-gray-500">
-                {["Figma", "Miro", "React", "TypeScript", "HTML", "CSS", "JavaScript"].map(
+                {["BUSINESS ANALYSIS", "BANKING", "SQL", "UAT", "STAKEHOLDER MANAGEMENT", "AGILE METHODOLOGIES"].map(
                   (tool) => (
                     <span key={tool}>{tool}</span>
                   )

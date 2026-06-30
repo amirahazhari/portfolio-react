@@ -1,41 +1,42 @@
-import { Sparkles, Palette, Code, Layers } from 'lucide-react';
+import { LaptopMinimal , ChartColumnBig, Handshake , MonitorCog  } from 'lucide-react';
 import idCard from "../assets/id-card.png";
 
 const skills = [
   {
-    icon: Palette,
-    title: 'UI/UX Design',
-    description: 'User-centered design from research to final mockups.'
+    icon: ChartColumnBig,
+    title: 'Business Analysis',
+    description: 'Translate business needs into actionable requirements and solutions.'
   },
   {
-    icon: Code,
-    title: 'Front-End Dev',
-    description: 'Clean, performant code with modern frameworks.'
+    icon: Handshake ,
+    title: 'Stakeholder Collaboration',
+    description: 'Facilitate communication between business and technical teams for successful project delivery.'
   },
   {
-    icon: Layers,
-    title: 'Design Systems',
-    description: 'Scalable systems bridging design and development.'
+    icon: MonitorCog ,
+    title: 'Solution Design',
+    description: 'Analyze complex problems and design effective digital solutions that meet business objectives.'
   },
   {
-    icon: Sparkles,
-    title: 'Prototyping',
-    description: 'Interactive prototypes and production-ready code.'
+    icon: LaptopMinimal ,
+    title: 'Technical Understanding',
+    description: 'Bridge business and technology by understanding technical constraints and possibilities to deliver optimal solutions.'
   }
 ];
 
 const tools = [
-  "Figma",
+  "Business Analysis",
+  "Banking & Fintech",
+  "Requirements Gathering",
+  "Stakeholder Management",
+  "Process Improvement",
+  "SQL",
+  "UAT",
   "Miro",
-  "HTML5",
-  "CSS3",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Tailwind CSS",
-  "Git",
-  "Framer Motion",
-  "VS Code"
+  "Figma",
+  "Jira",
+  "Azure DevOps",
+  "Agile Methodologies",
 ];
 
 
@@ -60,16 +61,14 @@ export function About() {
   {/* RIGHT: Text */}
   <div className="text-center lg:text-left">
     <h2 className="text-4xl sm:text-5xl md:text-6xl tracking-tight text-white mb-8 leading-tight">
-      <span className="block">Where design meets</span>
+      <span className="block">Turning business problems into</span>
       <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400">
-        development.
+        digital solutions.
       </span>
     </h2>
 
     <p className="text-lg sm:text-xl text-gray-400 max-w-3xl leading-relaxed mb-10">
-      I'm Amirah Azhari, a hybrid designer-developer who bridges the gap between
-      beautiful interfaces and clean code. I design with development in mind and
-      build with design precision.
+      I'm Amirah Azhari, a Business Analyst who thinks like a developer and designs like a designer. I specialize in banking, digital transformation, and product development, bridging the gap between business needs and technical solutions.
     </p>    
   </div>
 
@@ -115,7 +114,7 @@ export function About() {
         {/* Toolkit */}
         <div className="text-center">
           <p className="text-xs tracking-widest text-gray-500 mb-10">
-            MY TECHNICAL TOOLKIT
+           WHAT I BRING
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">

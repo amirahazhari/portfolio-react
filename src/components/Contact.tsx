@@ -6,12 +6,12 @@ export function Contact() {
     <section id="contact" className="py-32 px-6 bg-white">
       <div className="max-w-[980px] mx-auto text-center">
         <h2 className="text-4xl sm:text-5xl md:text-6xl tracking-tight text-gray-900 mb-6">
-          Let's create something
+          Let's build better
           <br />
-          extraordinary.
+          solutions together.
         </h2>
         <p className="text-xl sm:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto">
-          Have a project in mind? Let's talk.
+          Open to Business Analysis and digital transformation opportunities. 
         </p>
 
           <motion.a
@@ -21,7 +21,7 @@ export function Contact() {
               className="inline-flex items-center gap-3 px-8 py-4 bg-indigo-700 text-white rounded-full text-sm shadow-lg shadow-purple-900/10"
             >
               <Mail size={18} />
-          amirahazharii97@gmail.com
+         Get in touch
             </motion.a>
           
 

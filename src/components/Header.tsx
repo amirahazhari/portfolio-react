@@ -15,7 +15,7 @@ export function Header() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-10">
             <a href="#work" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">
-              Work
+              Case Studies
             </a>
             <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">
               About
